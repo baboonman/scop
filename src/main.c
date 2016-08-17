@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrenouf- <jrenouf-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/14 17:42:39 by jrenouf-          #+#    #+#             */
+/*   Updated: 2016/08/14 17:43:15 by jrenouf-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "scop.h"
 
 void				add_matrices(GLuint prog, float *m, float *p, t_input *i)
@@ -116,7 +128,7 @@ int					main(int ac, char **av)
 		return (error("please provide obj file"));
 	setup_param(&(data.win_info), "test", 640, 480);
 	setup_clip(&(data.clip_info), data.win_info.width / data.win_info.height);
-	init_openGL(&data, &(data.win_info));
+	init_opengl(&data, &(data.win_info));
 	init_input(&data);
 	gl.mesh = parse_obj(av[1]);
 	if (!(gl.mesh))
@@ -129,6 +141,6 @@ int					main(int ac, char **av)
 	setup_texture(&(gl.tex), gl.prog, gl.mesh);
 	get_proj_matx(p, &(data.clip_info));
 	run(&data, gl.mesh, gl.prog, p);
-	clean_openGL(&data);
+	clean_opengl(&data);
 	return (0);
 }

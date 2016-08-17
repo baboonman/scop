@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   obj_import.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrenouf- <jrenouf-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/14 17:42:39 by jrenouf-          #+#    #+#             */
+/*   Updated: 2016/08/14 17:43:15 by jrenouf-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef OBJ_IMPORT_H
 # define OBJ_IMPORT_H
 
@@ -18,5 +30,6 @@ char				*get_faces(char *s);
 
 void				allocate_mesh(t_mesh *mesh, t_sizes *sizes);
 void				init_min_max(t_mesh *m);
+int					check_extension(char *filename);
 
 #endif

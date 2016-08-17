@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   obj_import.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrenouf- <jrenouf-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/14 17:42:39 by jrenouf-          #+#    #+#             */
+/*   Updated: 2016/08/14 17:43:15 by jrenouf-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "obj_import.h"
 
 void				add_vertices(t_mesh *mesh, char *line)
@@ -76,10 +88,10 @@ t_mesh				*parse_obj(char *filename)
 	t_sizes			*sizes;
 	t_mesh			*mesh;
 
-	if ((fd = open(filename, O_RDONLY)) == -1)
-	{
+	if (!check_extension(filename))
 		return (NULL);
-	}
+	if ((fd = open(filename, O_RDONLY)) == -1)
+		return (NULL);
 	if (!(sizes = (t_sizes *)malloc(sizeof(t_sizes))))
 		return (NULL);
 	ft_bzero(sizes, sizeof(t_sizes));

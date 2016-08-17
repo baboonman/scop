@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   scop.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrenouf- <jrenouf-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/14 17:42:39 by jrenouf-          #+#    #+#             */
+/*   Updated: 2016/08/14 17:43:15 by jrenouf-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCOP_H
 # define SCOP_H
 
@@ -9,9 +21,9 @@
 # include "matrix.h"
 # include "shader.h"
 
-void	setup_param(t_win_info* info, char* name, GLfloat width,
+void	setup_param(t_win_info *info, char *name, GLfloat width,
 						GLfloat height);
-void	setup_clip(t_clip_info* clip, GLfloat aspect);
+void	setup_clip(t_clip_info *clip, GLfloat aspect);
 int		error(char *err);
 void	init_input(t_gl_data *data);
 void	move_mesh(t_gl_data *data, t_mesh *mesh, float *m, float *al);

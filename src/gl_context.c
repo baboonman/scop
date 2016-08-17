@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   gl_context.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrenouf- <jrenouf-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/14 17:42:39 by jrenouf-          #+#    #+#             */
+/*   Updated: 2016/08/14 17:43:15 by jrenouf-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "gl_context.h"
 
 void					set_hint(void)
@@ -16,7 +28,7 @@ void					set_callback(GLFWwindow *win)
 	glfwSetKeyCallback(win, key_callback);
 }
 
-int						init_openGL(t_gl_data *data, t_win_info *win_info)
+int						init_opengl(t_gl_data *data, t_win_info *win_info)
 {
 	int					width;
 	int					height;
@@ -41,7 +53,7 @@ int						init_openGL(t_gl_data *data, t_win_info *win_info)
 	return (1);
 }
 
-void					clean_openGL(t_gl_data *data)
+void					clean_opengl(t_gl_data *data)
 {
 	glfwDestroyWindow(data->win);
 	glfwTerminate();
