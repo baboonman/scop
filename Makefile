@@ -19,7 +19,7 @@ SRC= src/main.c \
 OBJ= $(SRC:.c=.o)
 
 INC=  -I includes -I includes/GLFW -I libft/includes -I src/includes
-LIB=  -L libs/ -lglad -lglfw3 -L libft -lft
+LIB=  -L libs/ -lglfw3 -L libft -lft
 
 FRWK=   -framework AGL \
 		-framework Cocoa \
