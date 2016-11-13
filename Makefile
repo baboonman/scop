@@ -1,5 +1,5 @@
 CC= gcc
-FLAGS=-Wall -Wextra -Werror -g
+FLAGS=-Wall -Wextra -Werror
 NAME=scop 
 
 SRC= src/main.c \
@@ -11,6 +11,7 @@ SRC= src/main.c \
 	 src/obj_import.c \
 	 src/obj_import_init.c \
 	 src/obj_import_utils.c \
+	 src/textures_load.c \
 	 src/bmp_import.c \
 	 src/utils.c \
 	 src/shader.c
