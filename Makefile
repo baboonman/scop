@@ -26,8 +26,7 @@ FRWK=   -framework AGL \
 		-framework OpenGL \
 		-framework IOKit \
 		-framework CoreFoundation \
-		-framework CoreVideo \
-		-framework OpenCL
+		-framework CoreVideo
 
 .PHONY: clean fclean re
 .SILENT:
